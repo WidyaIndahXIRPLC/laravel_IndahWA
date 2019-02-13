@@ -20,10 +20,12 @@ Route::prefix('admin')->group(function(){
 	Route::get('/', function(){
 		return view('admin.pages.dashboard');
 	})->name('admin.home');
+
+	Route::prefix('user')->group(function(){
+		Route::get('/setting','UserSettingController@form')->name('admin.user.setting');
+	});
 });
 
 });
 
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
