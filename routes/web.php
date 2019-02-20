@@ -33,3 +33,5 @@ Route::prefix('admin')->group(function(){
 });
 
 Auth::routes();
+
+Route::any('register', function(){ return abort(404); });
