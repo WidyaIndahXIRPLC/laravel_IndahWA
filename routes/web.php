@@ -41,7 +41,9 @@ Route::group(['prefix'=>'admin','middleware'=>['auth']], function(){
 	/*Kategori*/
 
 	Route::group(['prefix'=>'Kategori','middleware'=>'akses.admin'], function(){
-		Route::get('/','KategoriController@daftar')->name('admin.kategori');
+		Route::get('/','kategoriController@daftar')->name('admin.kategori');
+		Route::get('/add','kategoriController@add')->name('admin.kategori.add');
+		Route::post('/add','kategoriController@save');
 	});
 
 });
