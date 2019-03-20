@@ -1,4 +1,4 @@
-@extends('admin.main')
+ @extends('admin.main')
 @section('title','kategori')
 @section('content')
 <h1>Kategori</h1>
@@ -13,6 +13,14 @@
 </div>
 @endif
 
+@if( session('result') == 'update' )
+<div class="alert alert-success alert-dismissible fade show">
+	<strong>Updated !</strong>Berhasil diupdate.
+	<button type="button" class="close" data-dismiss="alert">
+		&times;
+	</button>
+</div>
+@endif
 
 <div class="row">
 	<div class="col-md-6 mb-3">
